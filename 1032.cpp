@@ -1,4 +1,3 @@
-// 1032
 #include <iostream>
 #include <string.h>
 #define MAX 51

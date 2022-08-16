@@ -3,9 +3,10 @@
 using namespace std;
 
 int main() {
-    int n; cin >> n;
-    
-    cout << (n%2? "SK" : "CY") << "\n";
+
+    string s;
+
+    while(getline(cin, s)) cout << s << '\n';
 
     return 0;
 }
