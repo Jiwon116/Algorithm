@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
     string s;
-    int arr[26] = {0, };
+    // int arr[26] = {0, };
     int answer[26] = {0, };
 
     // for(int i = 0; i < 26; ++i) {
@@ -25,6 +25,7 @@ int main() {
     // }
 
     // for (char c : s) answer[c - 'a']++;
+    // for(int i: answer) cout << i << " ";
     
     map<char, int> m;
     for (char c : s) {
@@ -35,7 +36,6 @@ int main() {
     for (int c = 'a'; c <= 'z'; ++c) {
         cout << m[(char)c] << " ";
     }
-    // for(int i: answer) cout << i << " ";
 
     return 0;
 }
