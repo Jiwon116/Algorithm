@@ -9,20 +9,20 @@ int main() {
     while (getline(cin, s)) {
         int upper_cnt = 0,lower_cnt = 0, number_cnt = 0, space_cnt = 0;
 
-        for(int i = 0; i < s.length(); ++i) {
-            if (s[i] >= 'A' && s[i] <= 'Z') {
+        for(char c : s) {
+            if ('A' <= c && c <= 'Z') {
                 upper_cnt++;
             }
 
-            if (s[i] >= 'a' && s[i] <= 'z') {
+            else if (c >= 'a' && c <= 'z') {
                 lower_cnt++;
             }
 
-            if (s[i] >= '0' && s[i] <= '9') {
+            else if (c >= '0' && c <= '9') {
                 number_cnt++; 
             }
 
-            if (s[i] == ' ') {
+            else if (c == ' ') {
                 space_cnt++;
             }
 
