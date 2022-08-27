@@ -50,6 +50,7 @@ int main() {
             }
         }
 
+        // 정답만 출력
         if(has_already_key) {
             for(string w : ans) {
                 cout << w << " ";
