@@ -24,17 +24,17 @@ int main() {
 
         // 양수면 오른쪽으로, 음수면 왼쪽으로 이동하기
         if(dq_num > 0) {
-            dq_num--;
             while(dq_num != 1) {
                 dq.push_back(dq.front());
                 dq.pop_front();
             }
+            --dq_num;
         } else {
-            dq_num++;
             while (dq_num != -1) {
                 dq.push_front(dq.back());
                 dq.pop_back();
             }
+            ++dq_num;
         }
     }
 
