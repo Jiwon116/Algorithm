@@ -27,14 +27,14 @@ int main() {
             while(dq_num != 1) {
                 dq.push_back(dq.front());
                 dq.pop_front();
+                --dq_num;
             }
-            --dq_num;
         } else {
-            while (dq_num != -1) {
+            while (dq_num != 0) {
                 dq.push_front(dq.back());
                 dq.pop_back();
+                ++dq_num;
             }
-            ++dq_num;
         }
     }
 
