@@ -23,7 +23,7 @@ int main() {
         if (max_count < (e -> second)) {
             max_count = (e -> second);
             answer = (e -> first);
-        } else if (max_count = (e -> second)) {
+        } else if (max_count == (e -> second)) {
             if ((e -> first) < answer) answer = (e -> first);
         }
     }
