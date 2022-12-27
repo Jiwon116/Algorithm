@@ -53,6 +53,8 @@ int main() {
     }
 
     // 최단 거리 테이블 초기화
+    // **memset은 INF처럼 큰 수 사용 못함 -> 사용 가능한 수 (-126 ~ 255)
+    // fill 함수 사용
     for(int i = 0; i <= v; ++i) {
         dist[i] = INF;
     }
