@@ -78,9 +78,7 @@ int main() {
         }
     }
 
-    for(int i = 0; i <= max_height; ++i) {
-        max_ans = max(ans[i], max_ans);
-    }
+    max_ans = *max_element(ans, ans + max_height + 1);
 
     cout << max_ans << '\n';
     
