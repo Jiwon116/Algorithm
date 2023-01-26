@@ -50,7 +50,6 @@ int main() {
     cin >> n >> m >> x;
 
     // 간선의 개수만큼 노드의 정보를 담음.
-    // 양방향 그래프이기 때문에 from과 to 모두 정보를 담아줌
     for(int i = 0; i < m; ++i) {
         int from, to, cost; cin >> from >> to >> cost;
         adj[from].push_back({to, cost});

@@ -29,7 +29,7 @@ int main() {
                 break;
             }
             else {
-                find_s = find_s = temp.substr(pos, it - pos);
+                find_s = temp.substr(pos, it - pos);
                 if(uos.find(find_s) != uos.end()) uos.erase(find_s);
                 pos = it + 1;
             }
