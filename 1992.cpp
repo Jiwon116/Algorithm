@@ -2,6 +2,8 @@
 #define ll long long
 #define pii pair<int, int>
 
+// 분할 정복
+
 using namespace std;
 
 int board[65][65];
