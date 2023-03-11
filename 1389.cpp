@@ -3,6 +3,8 @@
 #define pii pair<int, int>
 #define INF 1e9
 
+// 플로이드 워셜
+
 using namespace std;
 
 int n, m;
@@ -21,34 +23,36 @@ int main() {
 		adj[to][from] = 1;
 	}
 
-	for (int i = 0; i < n; ++i)
-		for (int j = 0; j < n; ++j)
-			if (i != j && !adj[i][j])
-				adj[i][j] = INF;
-
-	for (int k = 0; k < n; ++k)
-		for (int i = 0; i < n; ++i)
-			for (int j = 0; j < n; ++j)
-				adj[i][j] = min(adj[i][j], adj[i][k] + adj[k][j]);
+    for(int k = 1; k <= n; ++k) {
+        for(int i = 1; i <= n; ++i) {
+            for(int j = 1; j <= n; ++j) {
+                if (i == j) continue;
+                else if(adj[i][k] && adj[k][j]) {
+                    if (adj[i][j] == 0) adj[i][j] = adj[i][k] + adj[k][j];
+                    else adj[i][j] = min(adj[i][j], adj[i][k] + adj[k][j]);
+                }
+            }
+        }
+    }
 
 	int result = 1e9;
-	int min_index = -1;
+	int answer;
 
-	for (int i = 0; i < n; ++i) {
+	for (int i = 1; i <= n; ++i) {
 		int bacon = 0;
 
-		for (int j = 0; j < n; ++j) {
+		for (int j = 1; j <= n; ++j) {
 			if (i == j) continue;
 			bacon += adj[i][j];
 		}
 
 		if (result > bacon) {
 			result = bacon;
-			min_index = i;
+			answer = i;
 		}
 	}
 
-	cout << min_index + 1 << '\n';
+	cout << answer << '\n';
 	
 
 	return 0;
