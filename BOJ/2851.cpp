@@ -9,24 +9,17 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
     
-    vector<int> v;
-    int sum1 = 0;
+    vector<int> v(10);
+    int sum = 0, res = 0;
     
-    for(int i = 0; i < 10; ++i) {
-        int num; cin >> num;
-        v.push_back(num);
-    }
+    for(int i = 0; i < 10; ++i) cin >> v[i];
 
-    for(int i = 0; i < 10; ++i) {
-        int sum2 = sum1 + v[i];
-        if(sum2 >= 100) {
-            if(sum2 - 100 <= 100 - sum1) cout << sum2 << '\n';
-            else cout << sum1 << '\n';
-        }
-        sum1 = sum2;
-    }
+    for (int i = 0; i < 10; i++) {
 
-    cout << sum1 << '\n';
-    
+		if (abs(100 - sum) >= abs(100 - (sum + v[i]))) sum += v[i];
+		else break;
+	}
+	cout << sum << '\n';
+
     return 0;
 }
